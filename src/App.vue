@@ -1,28 +1,28 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-container class="grey lighten-5">
+    <v-row
+        v-for="n in 2"
+        :key="n"
+        :class="n === 1 ? 'mb-6' : ''"
+        no-gutters
+    >
+      <v-col
+          v-for="k in n + 1"
+          :key="k"
+      >
+        <v-card
+            class="pa-2"
+            outlined
+            tile
+        >
+          {{ k }} of {{ n + 1 }}
+        </v-card>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
