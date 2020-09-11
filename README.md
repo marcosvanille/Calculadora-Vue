@@ -1,4 +1,4 @@
-# calculadora-vue
+# cal
 
 ## Project setup
 ```
